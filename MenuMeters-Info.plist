@@ -36,13 +36,5 @@
 	<string>MenuMetersMainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
-	<key>SUScheduledCheckInterval</key>
-	<integer>36000</integer>
-	<key>SUSendProfileInfo</key>
-	<true/>
 </dict>
 </plist>

@@ -9,9 +9,6 @@
 #import "MenuMetersMenuExtraBase.h"
 #import "MenuMeterWorkarounds.h"
 
-#import "MenuMeterCPUExtra.h"
-#import "MenuMeterDiskExtra.h"
-#import "MenuMeterMemExtra.h"
 #import "MenuMeterNetExtra.h"
 
 #define kAppleInterfaceThemeChangedNotification        @"AppleInterfaceThemeChangedNotification"
@@ -157,21 +154,7 @@
         return;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(),^{
 //        if(@available(macOS 10.15,*)){
-            int tab=1;
-            if([self isKindOfClass:[MenuMeterCPUExtra class]]){
-                tab=1;
-            }
-            // on some Mac's there is a "GPU" tab at the 2nd position.
-            // So the rest needs to be addressed from the last
-            if([self isKindOfClass:[MenuMeterDiskExtra class]]){
-                tab=-2;
-            }
-            if([self isKindOfClass:[MenuMeterMemExtra class]]){
-                tab=-4;
-            }
-            if([self isKindOfClass:[MenuMeterNetExtra class]]){
-                tab=-1;
-            }
+            int tab=-1;
             NSString*source=[NSString stringWithFormat:@"tell application \"System Events\" to tell process \"Activity Monitor\" to click radio button %@ of radio group 1 of group 2 of toolbar of window 1", @(tab)];
             NSAppleScript*script=[[NSAppleScript alloc] initWithSource:source];
             NSDictionary* errorDict=nil;

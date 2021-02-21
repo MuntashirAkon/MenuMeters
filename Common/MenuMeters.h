@@ -36,15 +36,6 @@
 #define kPrefBundleName                 @"MenuMetersApp.app/Contents/Resources/MenuMeterDefaults.bundle"
 #endif
 
-// Bundle ID for the CPU menu extra
-#define kCPUMenuBundleID				@"com.ragingmenace.MenuMeterCPU"
-
-// Bundle ID for the Disk menu extra
-#define kDiskMenuBundleID				@"com.ragingmenace.MenuMeterDisk"
-
-// Bundle ID for the Memory menu extra
-#define kMemMenuBundleID				@"com.ragingmenace.MenuMeterMem"
-
 // Bundle ID for the Net menu extra
 #define kNetMenuBundleID				@"com.ragingmenace.MenuMeterNet"
 
@@ -79,9 +70,6 @@
 #define kPrefChangeNotification			@"prefChange"
 
 // Extras unload
-#define kCPUMenuUnloadNotification		@"cpuMenuUnload"
-#define kDiskMenuUnloadNotification		@"diskMenuUnload"
-#define kMemMenuUnloadNotification		@"memMenuUnload"
 #define kNetMenuUnloadNotification		@"netMenuUnload"
 
 ///////////////////////////////////////////////////////////////
